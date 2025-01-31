@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Transparente</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            text-align: center;
+            font-family: '';
+            color: #c59f46;
+            font-weight: 200;
+            
+        }
+        nav ul li a {
+            color: black !important;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .text-grids h1 {
+            margin-top: 150px;
+            text-align: center;
+            font-family: 'sans-serif';
+            font-weight: 200;
+            color: #c59f46;
+            font-size: 2.1rem;
+        }
+        .main-grid {
+    display: grid;
+    grid-template-columns: 40vw 20vw 15vw; /* Reduzi as colunas */
+    grid-template-rows: 15vw 15vw; /* Reduzi as linhas */
+    gap: 1.5vw; /* Reduzi o espaçamento entre as imagens */
+    margin: 2vw auto;
+    max-width: 80vw;
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 25vw 20vw 20vw 15vw; /* Reduzi as colunas */
+    gap: 1.5vw; /* Reduzi o espaçamento entre as imagens */
+}
+
+.main,
+.side1,
+.side2,
+.bottom-item {
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Mantive a altura como 100% para preencher o espaço da célula */
+}
+/* Reduz proporcionalmente no mobile */
+@media (max-width: 768px) {
+    .main-grid {
+        grid-template-columns: 48vw 24vw 24vw;
+        grid-template-rows: 22vw 22vw;
+        gap: 1.5vw;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 34vw 24vw 24vw 17vw;
+        gap: 1.5vw;
+    }
+}
+
+.main,
+.side1,
+.side2,
+.bottom-item {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+/* Para telas menores, reduzindo ainda mais sem remover elementos */
+@media (max-width: 480px) {
+    .main-grid {
+        grid-template-columns: 35vw 20vw 20vw;
+        grid-template-rows: 18vw 18vw;
+        gap: 1vw;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 34vw 22vw 22vw 17vw;
+        gap: 1vw;
+    }
+}
+.main,
+.side1,
+.side2,
+.bottom-item {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+        
+
+        /*CARROSSEL*/
+        .container-avaliacoes h1,
+        .container-avaliacoes p {
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'sans-serif';
+            color: #c59f46;
+        }
+
+        .container-avaliacoes h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 100px;
+            font-family: 'sans-serif';
+        }
+
+        .container-avaliacoes p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            font-family: 'sans-serif';
+        }
+
+        .rating-table {
+            margin: 30px auto;
+            width: 50%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 30px;
+            color: black;
+        }
+
+        .rating-table th,
+        .rating-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .rating-table .stars {
+            font-size: 1.5rem;
+            color: #c59f46;
+        }
+
+        .carousel {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .carousel-buttons {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .carousel-button {
+            padding: 10px 20px;
+            background-color: #c59f46;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .carousel-button:hover {
+            background-color: #755b1d;
+        }
+
+    .comodidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta automaticamente a quantidade de colunas */
+    gap: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Centralizando o título h2 */
+.comodidades h2 {
+    font-size: 1.9rem;
+    color: #c59f46;
+    margin-bottom: 30px;
+    font-family: '';
+    
+    font-weight: 200; /* Corrigi o valor da font-weight */
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 10px 10px;
+    width: 100%;
+}
+
+/* Lista */
+.comodidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas */
+    justify-content: space-between;
+}
+
+/* Itens da lista */
+.comodidades li {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    color: #555;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: calc(33% - 10px); /* Cada item ocupa 1/3 do espaço disponível */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ícones */
+.comodidades li i {
+    font-size: 1.5rem;
+    color: #c59f46;
+    margin-right: 15px;
+}
+
+/* Hover nos itens */
+.comodidades li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    .comodidades li {
+        width: calc(50% - 10px); /* Ajusta para 2 itens por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .comodidades li {
+        width: 100%; /* Ajusta para 1 item por linha em telas muito pequenas */
+    }
+}
+
+        /* Perguntas Frequentes */
+.faq {
+    padding: 20px;
+    max-width: 100%; /* Permite que ocupe 100% da largura da tela */
+    margin: 0 auto;
+    margin-top: 150px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c59f46;
+    text-align: center;
+    font-family: '';
+    font-weight: 200;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    padding: 20px; /* Aumentei o padding para dar mais espaço interno */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left; /* Alinha o conteúdo da faq-item à esquerda */
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    color: #333;
+    
+}
+
+.faq-item h3 i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #c59f46;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+        /* Proximidades */
+.proximidades {
+    padding: 20px;
+    width: 100%; /* Garantir que ocupe 100% da largura */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza a seção */
+    text-align: center; /* Centraliza o texto dentro da seção */
+}
+
+.proximidades h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #c59f46;
+    font-family: '';
+    font-weight: 200;
+}
+
+.proximidade-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left; /* Alinha o conteúdo dentro do item à esquerda */
+}
+
+.proximidade-item h3 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.proximidade-item h3 i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #c59f46;
+}
+
+.proximidade-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.proximidade-item ul li {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+.btn-visualizar {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #c59f46;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+        /*IFRAME*/
+        .mapa {
+    margin: 40px 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.mapa iframe {
+    width: 100%; /* Faz com que o iframe ocupe 100% da largura disponível */
+    height: 400px; /* Defina a altura do iframe, ajustando conforme necessário */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: none; /* Remove a borda padrão do iframe */
+}
+
+.mapa h2 {
+    font-size: 1.8rem;
+    color: #c59f46;
+    margin-bottom: 10px;
+    font-family: '';
+    font-weight: 200;
+}
+
+/*Tabela informações*/
+/* Tabela de Informações */
+.tabela-informacoes {
+    width: 80%; /* Ajuste a largura da tabela */
+    max-width: 1000px; /* Limita a largura máxima */
+    margin: 50px auto; /* Centraliza a tabela */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    color: black;
+    text-align: center; /* Centraliza o texto dentro da tabela */
+    margin-top: 100px;
+}
+
+.tabela-informacoes-text {
+    font-size: 2rem; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-family: 'sans-serif';
+    font-weight: 200;
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilo da Tabela */
+.table {
+    width: 100%; /* Faz a tabela ocupar 100% da largura do container */
+    border-collapse: collapse; /* Remove espaços entre as células */
+    margin: 0 auto; /* Centraliza a tabela */
+    font-size: 1rem; /* Tamanho da fonte das células */
+}
+
+.table th,
+.table td {
+    padding: 15px; /* Espaçamento interno das células */
+    border: 1px solid #ddd; /* Bordas das células */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.table th {
+    background-color: #f9f9f9; /* Cor de fundo do cabeçalho */
+    font-weight: bold; /* Texto em negrito */
+}
+
+.table i {
+    font-size: 1.5rem; /* Tamanho dos ícones */
+    color: #c59f46; /* Cor dos ícones */
+    margin-right: 10px; /* Espaçamento à direita dos ícones */
+}
+
+h2 {
+    font-size: 2rem; /* Tamanho da fonte */
+    font-family: 'sans-serif'; /* Fonte */
+    color: #c59f46; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .tabela-informacoes {
+        width: 95%; /* Ajusta a largura para telas menores */
+        padding: 10px; /* Reduz o espaçamento interno */
+    }
+
+    .table th,
+    .table td {
+        padding: 10px; /* Reduz o espaçamento interno das células */
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+    }
+
+    .table i {
+        font-size: 1.2rem; /* Reduz o tamanho dos ícones */
+    }
+}
+
+@media (max-width: 480px) {
+    .tabela-informacoes {
+        width: 100%; /* Ajusta a largura para telas muito pequenas */
+        padding: 5px; /* Reduz ainda mais o espaçamento interno */
+    }
+
+    .table th,
+    .table td {
+        padding: 8px; /* Reduz o espaçamento interno das células */
+        font-size: 0.8rem; /* Reduz o tamanho da fonte */
+    }
+
+    .table i {
+        font-size: 1rem; /* Reduz o tamanho dos ícones */
+    }
+}
+
+/* Botão Visita */
+/* Estilo para o botão flutuante */
+.agendar-btn-container {
+    position: fixed;
+    bottom: 60px; /* Aumentei para 60px para o botão ficar mais acima */
+    right: 20px;
+    z-index: 999; /* Garante que o botão fique por cima de outros elementos */
+}
+
+.agendar-btn-container .btn-agendar {
+    background-color: #000000b2;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.agendar-btn-container .btn-agendar:hover {
+    background-color: #c59f46;
+}
+
+
+/*Depoimentos*/
+
+/* Estilo básico */
+.depoimentos {
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.depoimentos p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.depoimentos h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0;
+}
+
+.depoimentos-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.slide {
+    display: none;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.depoimentos-container .slide.active {
+    display: block;
+}
+
+.depoi-txt {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.info-person {
+    font-size: 1rem;
+    color: #333;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #c59f46;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <a href="index.html"><i class="bi bi-buildings"></i></a>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                        <li><a href="imoveis_disponiveis.html">Imóveis Disponíveis</a></li>
+                    </ul>
+                </nav>
+
+                <div class="btn-contato">
+                    <a href="/public/views/index.html"><button class="dropdown-btn">Acesso Locatários</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="text-grids">
+        <h1>Hotel Nacional do Rio de Janeiro</h1>
+    </div>
+
+    <div class="main-grid">
+        <div class="main" style="background-image: url('/public/img/Hotel_nacional_rj01.jpg');"></div>
+        <div class="side1" style="background-image: url('/public/img/Hotel_nacional_rj02.jpg');"></div>
+        <div class="side2" style="background-image: url('/public/img/Hotel_nacional_rj03.jpg');"></div>
+        <div class="bottom-item" style="background-image: url('/public/img/Hotel_nacional_rj04.jpg');"></div>
+        <div class="bottom-item" style="background-image: url('/public/img/Hotel_nacional_rj05.jpg');"></div>
+        <div class="bottom-item" style="background-image: url('/public/img/Hotel_nacional_rj06.jpg');"></div>
+        <div class="bottom-item" style="background-image: url('/public/img/Hotel_nacional_rj07.jpg');"></div>
+    </div>
+        
+    </div>
+    <!-- Botão de Agendar Visita -->
+<!-- No hotel_nacional_rj.html, altere o link do botão para: -->
+<div class="agendar-btn-container">
+    <a href="/public/views/agendar_visita.html" class="btn-agendar">Agendar Visita</a>
+</div>
+
+
+<!-- Tabela com as informações do imóvel -->
+<h2 class="tabela-informacoes-text">Escolha uma das opções de acomodação!</h2>
+
+<section class="tabela-informacoes">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Características</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i class="bi bi-house-door"></i> Padrão - 2 Quartos</td>
+                <td>Acomodações ideais para estadias curtas e práticas</td>
+                <td>R$ 2.500,00</td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-house-door"></i> Padrão - 3 Quartos</td>
+                <td>Acomodações ideais para famílias pequenas</td>
+                <td>R$ 3.000,00</td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-house-door"></i> Luxo - 2 Quartos</td>
+                <td>Conforto e requinte em cada detalhe, ideal para casais</td>
+                <td>R$ 3.500,00</td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-house-door"></i> Luxo - 4 Quartos</td>
+                <td>Vista panorâmica e serviços exclusivos</td>
+                <td>R$ 5.000,00</td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-house-door"></i> Suíte - 2 Quartos</td>
+                <td>Acomodações exclusivas, com muito espaço e privacidade</td>
+                <td>R$ 5.500,00</td>
+            </tr>
+            <tr>
+                <td><i class="bi bi-house-door"></i> Suíte - 3 Quartos</td>
+                <td>Acomodações luxuosas, com banheira de hidromassagem</td>
+                <td>R$ 7.000,00</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+    <!-- Avaliações -->
+    <section class="depoimentos">
+        <p>Avaliações</p>
+        <h3>O que os clientes dizem</h3>
+        <p>Quer saber o que torna nossa marca tão especial? Confira o que nossos clientes têm a dizer!</p>
+        <div class="depoimentos-container">
+            <!-- Depo 1 -->
+            <div class="slide">
+                <i class="bi bi-quote"></i>
+                <p class="depoi-txt">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius officiis dolorem repudiandae eum
+                    architecto? Eos, porro architecto, tempora autem exercitationem veniam nobis, amet recusandae
+                    inventore doloremque illum facere optio aspernatur?"
+                </p>
+                <div class="info-person">
+                    <p class="nome-person">Pessoa1</p>
+                    <p class="func-person">Web Developer</p>
+                </div>
+            </div>
+    
+            <!-- Depo 2 -->
+            <div class="slide">
+                <i class="bi bi-quote"></i>
+                <p class="depoi-txt">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus soluta voluptas velit maiores
+                    nobis mollitia libero nulla, quaerat sint obcaecati."
+                </p>
+                <div class="info-person">
+                    <p class="nome-person">Pessoa2</p>
+                    <p class="func-person">Graphic Designer</p>
+                </div>
+            </div>
+    
+            <!-- Depo 3 -->
+            <div class="slide">
+                <i class="bi bi-quote"></i>
+                <p class="depoi-txt">
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit tempora accusantium quae vero
+                    dolorem, nihil est officiis necessitatibus aut?"
+                </p>
+                <div class="info-person">
+                    <p class="nome-person">Pessoa3</p>
+                    <p class="func-person">Product Manager</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bolinhas de navegação -->
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+
+
+    <!-- Avaliações -->
+
+    <main class="comodidades">
+        <section class="principais">
+            <h2>Principais Comodidades</h2>
+            <ul>
+                <li><i class="bi bi-water"></i> Piscina ao ar livre</li>
+                <li><i class="bi bi-wifi"></i> Wi-Fi gratuito</li>
+                <li><i class="bi bi-car-front-fill"></i> Estacionamento privativo</li>
+                <li><i class="bi bi-people-fill"></i> Quartos para famílias</li>
+                <li><i class="bi bi-dumbbell"></i> Academia</li>
+                <li><i class="bi bi-shop"></i> Restaurante</li>
+                <li><i class="bi bi-spa"></i> Spa / Centro de bem-estar</li>
+                <li><i class="bi bi-door-closed"></i> Quartos para não fumantes</li>
+                <li><i class="bi bi-cup-straw"></i> Bar</li>
+                <li><i class="bi bi-egg-fried"></i> Café da manhã no quarto</li>
+                <li><i class="bi bi-tv-fill"></i> TV de tela plana</li>
+                <li><i class="bi bi-cloud-upload-fill"></i> Acesso Wi-Fi gratuito</li>
+                <li><i class="bi bi-bed"></i> Camas extralongas</li>
+                <li><i class="bi bi-lamp-fill"></i> Mesa de trabalho</li>
+            </ul>
+        </section>
+    </main>
+
+    <section class="faq">
+        <h2>Perguntas Frequentes</h2>
+
+        <div class="faq-item">
+            <h3><i class="bi bi-question-circle-fill"></i> Como posso fazer uma reserva?</h3>
+            <p>Você pode fazer sua reserva diretamente no nosso site ou pelo telefone...</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="bi bi-question-circle-fill"></i> O hotel possui estacionamento?</h3>
+            <p>Sim, temos estacionamento privativo para nossos hóspedes...</p>
+        </div>
+
+        <div class="faq-item">
+            <h3><i class="bi bi-question-circle-fill"></i> O hotel oferece transporte?</h3>
+            <p>Sim, oferecemos serviço de transporte para atrações locais...</p>
+        </div>
+    </section>
+
+    <section class="proximidades">
+        <h2>Proximidades</h2>
+
+        <div class="proximidade-item">
+            <h3><i class="bi bi-geo-alt-fill"></i> Praias próximas</h3>
+            <ul>
+                <li>Copacabana</li>
+                <li>Ipanema</li>
+                <li>Barra da Tijuca</li>
+            </ul>
+        </div>
+
+        <div class="proximidade-item">
+            <h3><i class="bi bi-geo-alt-fill"></i> Atrações Turísticas</h3>
+            <ul>
+                <li>Cristo Redentor</li>
+                <li>Pão de Açúcar</li>
+                <li>Maracanã</li>
+            </ul>
+        </div>
+
+        <div class="proximidade-item">
+            <h3><i class="bi bi-geo-alt-fill"></i> Restaurantes</h3>
+            <ul>
+                <li>Churrascaria Rio Grande</li>
+                <li>Restaurante Aprazível</li>
+                <li>Oro</li>
+            </ul>
+        </div>
+
+        <button class="btn-visualizar">Ver mais</button>
+    </section>
+
+    <section class="mapa">
+        <h2>Localização do Hotel Nacional Rio de Janeiro</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58763.20745827023!2d-43.328918578320305!3d-22.998039599999988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd69fcbb7ffed%3A0xef6b6062f52543cc!2sHotel%20Nacional%20Rio%20de%20Janeiro!5e0!3m2!1spt-BR!2sbr!4v1737574876776!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 9h às 18h</p>
+                <p>Sábado: 9h às 14h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="bi bi-telephone-fill"></i> Telefone: (11) 1234-5678</p>
+                <p><i class="bi bi-envelope-fill"></i> Email: contato@elysiumimoveis.com.br</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Siga-nos</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Elysium Imóveis. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script>
+        // Carrossel de avaliações
+        let carouselContainer = document.getElementById('carousel-container');
+        let currentIndex = 0;
+        let items = document.querySelectorAll('.carousel-item');
+        let prevButton = document.getElementById('prev');
+        let nextButton = document.getElementById('next');
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < items.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        function updateCarousel() {
+            carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+
+<!--Depoimentos js-->
+<script>
+    const slides = document.querySelectorAll('.depoimentos-container .slide');
+    const dots = document.querySelectorAll('.dots-container .dot');
+
+    function showSlide(slideIndex) {
+        // Remover a classe 'active' de todos os slides e dots
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Adicionar a classe 'active' ao slide e dot atual
+        slides[slideIndex].classList.add('active');
+        dots[slideIndex].classList.add('active');
+    }
+
+    // Mostrar o primeiro slide
+    showSlide(0);
+
+    // Navegação automática
+    let slideIndex = 0;
+    setInterval(() => {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }, 5000); // Trocar de slide a cada 5 segundos
+
+    // Navegação manual pelas bolinhas
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+</script>
+
+<script src="js/menu.js"></script>
+</body>
+
+</html>

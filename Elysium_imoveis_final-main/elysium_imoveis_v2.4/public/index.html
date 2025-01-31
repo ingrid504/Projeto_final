@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Transparente</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                <!-- Logo -->
+                <a href="index.html"><i class="bi bi-buildings"></i></a>
+
+                <!-- Navegação -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre_nos.html">Sobre Nós</a></li>
+                        <li><a href="imoveis_disponiveis.html">Imóveis Disponíveis</a></li>
+
+                    </ul>
+                </nav>
+
+                <!-- Botão de Acesso Locatários -->
+                <div class="btn-contato">
+                    <a href="/public/views/index.html"><button class="dropdown-btn">Acesso Locatários</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!--Vídeo Principal-->
+    <section class="banner">
+        <video autoplay loop muted class="banner-video">
+            <source src="/public/img/video_principal.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+
+        <h1 class="title">Elysium Imóveis</h1>
+        <div>
+            <p class="paragrafo">Seu lar, nossa referência.</p>
+        </div>
+    </section>
+    <!--Vídeo Principal-->
+
+
+
+
+
+
+
+
+
+    <!--Cards em loop infinito-->
+    <section class="advantages-section">
+        <h2 class="section-title">Garanta suas melhores oportunidades no mercado imobiliário com a Elysium Imóveis!</h2>
+        <div class="advantages-container">
+            <div class="advantage-item">
+                <i class="bi bi-person-check"></i>
+                <h3>Atendimento Personalizado</h3>
+                <p>Uma equipe dedicada para atender suas necessidades.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="bi bi-building"></i>
+                <h3>Imóveis de Alta Qualidade</h3>
+                <p>Oferecemos imóveis que superam as expectativas.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="bi bi-cash-coin"></i>
+                <h3>Financiamento Facilitado</h3>
+                <p>Soluções práticas para o seu financiamento.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="bi bi-file-earmark-text"></i>
+                <h3>Consultoria Jurídica</h3>
+                <p>Transações seguras com apoio jurídico especializado.</p>
+            </div>
+            <!-- Duplicando os items para criar o loop -->
+            <div class="advantage-item">
+                <i class="bi bi-person-check"></i>
+                <h3>Atendimento Personalizado</h3>
+                <p>Uma equipe dedicada para atender suas necessidades.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="bi bi-building"></i>
+                <h3>Imóveis de Alta Qualidade</h3>
+                <p>Oferecemos imóveis que superam as expectativas.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="bi bi-cash-coin"></i>
+                <h3>Financiamento Facilitado</h3>
+                <p>Soluções práticas para o seu financiamento.</p>
+            </div>
+            <div class="advantage-item">
+                <i class="bi bi-file-earmark-text"></i>
+                <h3>Consultoria Jurídica</h3>
+                <p>Transações seguras com apoio jurídico especializado.</p>
+            </div>
+        </div>
+    </section>
+    <!--Cards em loop infinito-->
+
+
+
+    <!--Cards padrão-->
+    <section id="properties" class="principais-visitas">
+        <h2>Lugares favoritados pelos nossos clientes</h2>
+        <div class="cards">
+            <!-- Card 1 -->
+            <div class="card" id="card1">
+                <img src="/public/img/Hotel_nacional_rj01.jpg" alt="Hotel Nacional Rio de Janeiro">
+                <div class="info">
+                    <h3 class="place-title">Hotel Nacional Rio de Janeiro</h3>
+                    <p>Hotel de luxo com localização privilegiada no Rio de Janeiro. Oferece uma vista espetacular da
+                        cidade e uma infraestrutura completa para os hóspedes.</p>
+                    <p class="rating">
+                        <strong>Avaliação:</strong> 4.7
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <a href="#avaliacoes1" style="color: #c59f46; text-decoration: none;">(120 avaliações)</a>
+                    </p>
+                    <p><strong>Facilidades:</strong> Piscina, restaurante gourmet, centro de convenções, localização
+                        central.</p>
+                        <a href="hotel_nacional_rj.html" class="btn-ver-mais">Ver mais</a>
+                </div>
+                <div class="card-right">
+                    <iframe src="https://www.google.com/maps?q=Hotel+Nacional,+Rio+de+Janeiro,+Brasil&output=embed"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card" id="card2">
+                <img src="/public/img/rosewood_01.jpg" alt="Rosewood São Paulo">
+                <div class="info">
+                    <h3 class="place-title">Rosewood São Paulo</h3>
+                    <p>Hotel boutique com design moderno e sofisticado. Localizado no coração de São Paulo, oferece uma
+                        experiência de luxo e exclusividade.</p>
+                    <p class="rating">
+                        <strong>Avaliação:</strong> 4.9
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <a href="#avaliacoes2" style="color: #c59f46; text-decoration: none;">(80 avaliações)</a>
+                    </p>
+                    <p><strong>Facilidades:</strong> Spa, bar exclusivo, restaurante premiado, localização estratégica.
+                    </p>
+                    <button class="btn-ver-mais" data-target="modal2">Ver mais</button>
+                </div>
+                <div class="card-right">
+                    <iframe src="https://www.google.com/maps?q=Rosewood,+São+Paulo,+Brasil&output=embed"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card" id="card3">
+                <img src="/public/img/royal_1.jpg" alt="Royal Boutique Savassi Hotel">
+                <div class="info">
+                    <h3 class="place-title">Royal Boutique Savassi Hotel</h3>
+                    <p>Acomodações luxuosas em Belo Horizonte. Ideal para quem busca conforto e sofisticação em uma das
+                        regiões mais charmosas da cidade.</p>
+                    <p class="rating">
+                        <strong>Avaliação:</strong> 4.5
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <a href="#avaliacoes3" style="color: #c59f46; text-decoration: none;">(100 avaliações)</a>
+                    </p>
+                    <p><strong>Facilidades:</strong> Academia, restaurante com vista, estacionamento privativo.</p>
+                    <button class="btn-ver-mais" data-target="modal3">Ver mais</button>
+                </div>
+                <div class="card-right">
+                    <iframe
+                        src="https://www.google.com/maps?q=Royal+Boutique+Savassi,+Belo+Horizonte,+Brasil&output=embed"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Cards padrão-->
+
+
+
+    <!--Tríade de cards-->
+    <section class="services-section">
+        <div class="services-container">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <i class="bi bi-file-arrow-up service-icon"></i>
+                <h3 class="service-title">Imóvel sob encomenda</h3>
+                <p class="service-description">
+                    Descreva o imóvel que você procura e nós avisaremos quando encontrarmos.
+                </p>
+                <a href="#" class="service-link">
+                    Encomende seu imóvel <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Card 2 -->
+            <div class="service-card">
+                <i class="bi bi-currency-dollar service-icon"></i>
+                <h3 class="service-title">Financiamento</h3>
+                <p class="service-description">
+                    As melhores ofertas para você financiar seu imóvel.
+                </p>
+                <a href="#" class="service-link">
+                    Faça uma simulação <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+            <!-- Card 3 -->
+            <div class="service-card">
+                <i class="bi bi-house-door service-icon"></i>
+                <h3 class="service-title">Cadastre seu imóvel</h3>
+                <p class="service-description">
+                    Anuncie conosco! Nós encontraremos o melhor negócio para você.
+                </p>
+                <a href="#" class="service-link">
+                    Cadastre seu imóvel <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--Tríade de cards-->
+
+
+
+
+
+
+<!--Depoimentos-->
+<!-- Avaliações -->
+<section class="depoimentos">
+    <p>Avaliações</p>
+    <h3>O que os clientes dizem</h3>
+    <p>Quer saber o que torna nossa marca tão especial? Confira o que nossos clientes têm a dizer!</p>
+    <div class="depoimentos-container">
+        <!-- Depo 1 -->
+        <div class="slide">
+            <i class="bi bi-quote"></i>
+            <p class="depoi-txt">
+                "A Elysium Imóveis foi incrível no processo de compra da minha casa. Desde a escolha do imóvel até a assinatura do contrato, tudo foi muito claro e transparente. Recomendo a todos que procuram confiança no mercado imobiliário."
+            </p>
+
+            <div class="info-person">
+                <p class="nome-person">Carlos Ferreira</p>
+                <p class="func-person">Engenheiro Civil</p>
+            </div>
+        </div>
+
+        <!-- Depo 2 -->
+        <div class="slide">
+            <i class="bi bi-quote"></i>
+            <p class="depoi-txt">
+                "A equipe foi extremamente atenciosa e paciente durante o processo de aluguel do meu apartamento. A rapidez e a eficiência superaram minhas expectativas. Obrigado, Elysium Imóveis, por toda a dedicação!"
+            </p>
+
+            <div class="info-person">
+                <p class="nome-person">Ana Souza</p>
+                <p class="func-person">Arquiteta</p>
+            </div>
+        </div>
+
+        <!-- Depo 3 -->
+        <div class="slide">
+            <i class="bi bi-quote"></i>
+            <p class="depoi-txt">
+                "Eu precisava vender minha chácara e a Elysium Imóveis cuidou de tudo, desde a divulgação até o fechamento da venda. Eles foram muito profissionais e sempre mantiveram contato. Agradeço pelo ótimo trabalho!"
+            </p>
+
+            <div class="info-person">
+                <p class="nome-person">Marcos Silva</p>
+                <p class="func-person">Corretor de Imóveis</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bolinhas de navegação -->
+    <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <!--Lugares da planta-->
+    <section class="launches-section">
+        <h2 class="section-title">Descubra os lançamentos imperdíveis!</h2>
+        <p class="section-paragrafo">Aproveite as melhores oportunidades antes de todos! Descubra imóveis incríveis em
+            primeira mão e garanta condições especiais!</p>
+        <div class="launches-container">
+            <div class="launch-item">
+                <img src="/public/img/residencial_aurora.webp" alt="Imóvel 1">
+                <h3>Residencial Aurora</h3>
+                <p>Localizado no centro. A partir de R$ 350.000.</p>
+                <a href="#" class="launch-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="launch-item">
+                <img src="/public/img/planta_02.jpg" alt="Imóvel 2">
+                <h3>Condomínio Solaris</h3>
+                <p>Bairro nobre. A partir de R$ 450.000.</p>
+                <a href="#" class="launch-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+
+    </section>
+    <!--Lugares da planta-->
+
+
+
+
+
+    
+
+
+
+
+<!-- Footer-->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Informações de horário de funcionamento -->
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 9h às 18h</p>
+                <p>Sábado: 9h às 14h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+
+            <!-- Contatos -->
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p><i class="bi bi-telephone-fill"></i> Telefone: (11) 1234-5678</p>
+                <p><i class="bi bi-envelope-fill"></i> Email: contato@elysiumimoveis.com.br</p>
+            </div>
+        
+            <!-- Redes Sociais -->
+            <div class="footer-section">
+                <h3>Siga-nos</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Elysium Imóveis. Todos os direitos reservados.
+        </div>
+    </footer>
+
+<!-- Ícone do Chat -->
+<div id="chat-icon">
+    <i class="bi bi-chat-dots-fill"></i>
+</div>
+
+<!-- Caixa do Chat -->
+<div id="chat-box">
+    <div id="chat-header">
+        <h4>Atendimento</h4>
+        <span class="close-btn">&times;</span>
+    </div>
+    <div id="chat-messages">
+        <p><strong>Bot:</strong> Olá! Como posso ajudá-lo?</p>
+    </div>
+    <div id="chat-options">
+        <button class="chat-option">Imóveis disponíveis</button>
+        <button class="chat-option">Financiamento</button>
+        <button class="chat-option">Contato</button>
+        <button class="chat-option">Horário de funcionamento</button>
+    </div>
+    <div id="user-input">
+        <input type="text" id="user-message" placeholder="Digite sua mensagem...">
+        <button id="send-message">Enviar</button>
+    </div>
+</div>
+
+<script>
+    const chatIcon = document.getElementById('chat-icon');
+    const chatBox = document.getElementById('chat-box');
+    const closeBtn = document.querySelector('.close-btn');
+    const chatMessages = document.getElementById('chat-messages');
+    const userMessage = document.getElementById('user-message');
+    const sendMessage = document.getElementById('send-message');
+    const chatOptions = document.querySelectorAll('.chat-option');
+
+    const responses = {
+        "imóveis disponíveis": "Temos vários imóveis disponíveis. Você pode conferir a lista completa na nossa página de Imóveis Disponíveis.",
+        "financiamento": "Oferecemos diversas opções de financiamento. Entre em contato para mais detalhes.",
+        "contato": "Você pode nos contatar pelo telefone (11) 1234-5678 ou pelo email contato@elysiumimoveis.com.br.",
+        "horário de funcionamento": "Nosso horário de funcionamento é de Segunda a Sexta: 9h às 18h, Sábado: 9h às 14h, Domingo: Fechado."
+    };
+
+    chatIcon.addEventListener('click', () => {
+        chatBox.style.display = 'flex';
+        chatIcon.style.display = 'none';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        chatBox.style.display = 'none';
+        chatIcon.style.display = 'flex';
+    });
+
+    sendMessage.addEventListener('click', () => {
+        const message = userMessage.value.toLowerCase();
+        if (message.trim() !== '') {
+            chatMessages.innerHTML += `<p><strong>Você:</strong> ${userMessage.value}</p>`;
+            userMessage.value = '';
+            let response = "Desculpe, não entendi sua pergunta.";
+            for (const key in responses) {
+                if (message.includes(key)) {
+                    response = responses[key];
+                    break;
+                }
+            }
+            chatMessages.innerHTML += `<p><strong>Bot:</strong> ${response}</p>`;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    });
+
+    userMessage.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage.click();
+        }
+    });
+
+    chatOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const message = option.textContent.toLowerCase();
+            chatMessages.innerHTML += `<p><strong>Você:</strong> ${message}</p>`;
+            let response = responses[message];
+            chatMessages.innerHTML += `<p><strong>Bot:</strong> ${response}</p>`;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+    });
+</script>
+
+
+
+
+<script src="js/menu.js"></script>
+
+
+</body>
+
+</html>

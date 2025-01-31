@@ -1,0 +1,67 @@
+<!-- agendar_visita.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Visita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container { max-width: 600px; margin-top: 50px; }
+        h2 { color: #c59f46; margin-bottom: 30px; }
+        
+        .back-btn {
+        color: #c59f46;
+        text-decoration: none;
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .back-btn:hover {
+        text-decoration: underline;
+    }
+    .btn-agend {
+        background-color: #c59f46;
+        color: white;
+        border-radius: 10px ;
+        border-color: transparent;
+        padding: 0.4vw 0.8vw;
+    }
+    h2 {
+        font-family: '';
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Agendar Visita ao Hotel Nacional RJ</h2>
+        <form id="agendarForm">
+            <div class="mb-3">
+                <label class="form-label">Nome completo</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Data</label>
+                <input type="date" class="form-control" id="data" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Horário</label>
+                <input type="time" class="form-control" id="horario" required>
+            </div>
+            <!-- Campo oculto para o nome do imóvel -->
+            <input type="hidden" id="imovel" value="Hotel Nacional do Rio de Janeiro">
+            <button type="submit" class="btn-agend">Confirmar Agendamento</button>
+        </form>
+    </div>
+    <a href="index.html" class="back-btn">&larr; Voltar</a>
+    <script src="../script.js"></script>
+</body>
+</html>
