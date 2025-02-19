@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+   
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+        }
+
+        label {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background-color: #c59f46;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #a17a2f;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link-register {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .link-register a {
+            color: #c59f46;
+            text-decoration: none;
+        }
+
+        .link-register a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .back-btn {
+        color: #c59f46;
+        text-decoration: none;
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .back-btn:hover {
+        text-decoration: underline;
+    }
+
+    </style>
+    
+</head>
+<body>
+    <div class="login-container">
+        <h2>Cadastro de Usuário</h2>
+        <form id="registerForm">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Senha</label>
+            <input type="password" id="password" required>
+
+            <button type="submit" class="submit-btn">Cadastrar</button>
+        </form>
+        <div class="link-register">
+            <a href="index.html">Já tem uma conta? Faça login</a>
+        </div>
+    </div>
+    <a href="index.html" class="back-btn">&larr; Voltar</a>
+    <script src="/public/script.js"></script>
+</body>
+</html>
