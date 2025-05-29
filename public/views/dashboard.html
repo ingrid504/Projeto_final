@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .back-btn {
+        color: #c59f46;
+        text-decoration: none;
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .back-btn:hover {
+        text-decoration: underline;
+    }
+
+     h1 {
+        color: #c59f46;
+        font-family: '';
+
+    }
+        </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Locatários Cadastrados</h1>
+        <div class="card shadow p-4">
+            <ul class="list-group" id="userList"></ul>
+        </div>
+    </div>
+    <!--VISITAS AGENDADAS-->
+    
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Visitas Agendadas</h1>
+        <div class="card shadow p-4">
+            <div id="agendamentosContainer">
+                <!-- As informações de agendamento serão inseridas aqui via JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+<a href="/public/index.html" class="back-btn">&larr; Voltar</a>
+    <script src="/public/script.js"></script>
+</body>
+</html>
